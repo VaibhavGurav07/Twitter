@@ -1,0 +1,15 @@
+{% extends "layout.html"%}
+
+{% block title %}
+index 
+{% endblock %}
+
+
+{% block content%}
+<h1 class="text-center mt-4">Are Yoy want to the conform delete this ??</h1>
+<form action="" method="POST">
+    {% csrf_token %}
+    <button class="btn btn-danger">Delete</button>
+    <a href="{% url 'tweet_list' %}" class="btn btn-success ">Cancel</a>
+</form>
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<h2>Logged Out</h2>
+
+<p>You have been logged Out </p>
+<a href="{% url 'login' %}"></a>
+
+<button class="btn btn-primary" type="submit"></button>
+
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends "layout.html"%}
+
+{% block title %}
+index 
+{% endblock %}
+
+
+{% block content%}
+<h1 >Welcome to the Mysite</h1>
+<h2>{% if form.instance.pk %}
+        Edit tweet 
+    {% else %} 
+        create tweet
+    {% endif %}
+   <form method="POST" enctype="multipart/form-data" class="form">    <!--# images files anything Accepted -->
+        {% csrf_token %}
+         {{form.as_p}}  <!--as a paraghraph for that -->
+         <button class="btn btn-warning" type="submit">submit</button>
+    </form>
+    <a href="{% url 'tweet_list' %}" class="btn btn-primary">back</a>
+</h2>
+{% endblock %}

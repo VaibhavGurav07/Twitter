@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<h2>Register Form</h2>
+<form  method="POST">
+    {% csrf_token %}
+    {{form}}
+    <button class="btn btn-primary"> Regiater</button>
+</form>
+
+
+ <a href="{% url 'login_user' %}" >You have Account then click Here. </a> 
+{% endblock %}
